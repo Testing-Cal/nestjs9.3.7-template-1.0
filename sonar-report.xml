@@ -1,0 +1,6 @@
+<testExecutions version="1">
+  <file path="test/app.e2e-spec.ts">
+    <testCase name="AppComponent should create the app" duration="6"/>
+    <testCase name="AppComponent should have `Hello, Welcome to Engineering Lab! Start editing to see some magic happen :)` name" duration="2"/>
+  </file>
+</testExecutions>
