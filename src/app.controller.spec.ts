@@ -15,8 +15,15 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello, Welcome to Engineering Lab! Start editing to see some magic happen :)"', () => {
-      expect(appController.getHello()).toBe('Hello, Welcome to Engineering Lab! Start editing to see some magic happen :)');
+    it('should return `<html><head><title>NestJS 9</title></head><body><p>Hello, Welcome to Engineering Lab! Start editing to see some magic happen :)</p></body></html>`',
+      () => { expect(appController.getHello()).toBe(`<html>
+        <head>
+          <title>NestJS 9</title>
+        </head>
+        <body>
+          <p>Hello, Welcome to Engineering Lab! Start editing to see some magic happen :)</p>
+        </body>
+      </html>`);
     });
   });
 });
