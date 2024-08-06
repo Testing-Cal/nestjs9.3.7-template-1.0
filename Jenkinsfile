@@ -310,7 +310,7 @@ pipeline {
                          if ("${list[i]}" == "'UnitTests'" && env.ACTION == 'DEPLOY') {
                             stage('Unit Tests') {
                                 sh """
-                                docker run --rm --user root -v "$WORKSPACE":/opt/repo -w /opt/repo $NODE_IMAGE /bin/bash -c "cd /opt/repo &&  npm install && npm test -- --watchAll=false && npm test:cov"
+                                docker run --rm --user root -v "$WORKSPACE":/opt/repo -w /opt/repo $NODE_IMAGE /bin/bash -c "cd /opt/repo &&  npm install && npm run test -- --watchAll=false && npm run test:cov"
                                 sudo chown -R `id -u`:`id -g` "$WORKSPACE"
                                 """
                             }
