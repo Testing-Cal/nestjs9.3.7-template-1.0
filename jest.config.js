@@ -16,5 +16,5 @@ module.exports = {
   },
   clearMocks: true,
   setupFilesAfterEnv: ["./setup-tests.ts"],
-  testResultsProcessor: "jest-sonar-reporter", // Use SonarQube-compatible reporter
+  testResultsProcessor: "jest-sonar-reporter" // Use SonarQube-compatible reporter
 };
